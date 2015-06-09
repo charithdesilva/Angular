@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="githubusermodule">
 
 <head>
   <script data-require="angular.js@1.3.16" data-semver="1.3.16" src="https://code.angularjs.org/1.3.16/angular.js"></script>
+  <script data-require="angular-route@1.3.16" data-semver="1.3.16" src="https://code.angularjs.org/1.3.16/angular-route.js"></script>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
+  <script src="app.js"></script>
+  <script src="main.js"></script>
+  <script src="user.js"></script>
   <script src="github.js"></script>
 </head>
 
-<body ng-app="githubusermodule">
-  <div ng-controller="userController">
-    <div style="color:red">{{error}}</div>
-    <div>
-      <div>
-        <form id="userSearch">
-          <input type="text" placeholder="User name .." value="" ng-model="username" />
-          <input type="submit" value="Search" ng-click="search(username)" />
-        </form>
-      </div>
-      <br>
-      <div ng-include="'userDetails.html'" ng-show="user"></div>
-    </div>
-  </div>
+<body>
+  <h1>Github explorer</h1>
+  <div ng-view></div>
 </body>
 
 </html>

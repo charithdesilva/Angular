@@ -1,0 +1,22 @@
+/* Styles go here */
+
+.main {
+  font-family: Georgia;
+  line-height: 1.4;
+  font-weight: normal;
+  font-stretch: normal;
+  font-variant: small-caps;
+  font-size: 16px;
+}
+
+.logo {
+  top: 10%;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.repo {
+  display: inline-block;
+}
+

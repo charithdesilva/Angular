@@ -1,0 +1,27 @@
+<div>
+  <br>
+  {{user.name}}
+</div>
+
+<div>
+  <select ng-model="repoOrder">
+    <option value="+id">Repo Id</option>
+    <option value="+name">Repo Name</option>
+    <option value="+language">Repo Language</option>
+  </select>
+</div>
+
+
+<br>
+<div ng-show="user">
+  <img class="logo" ng-src={{user.avatar_url}} title={{user.name}}/>
+</div>
+<br/>
+<div>
+  <div ng-repeat="repo in repos | orderBy:repoOrder" class="main">
+    <div class="repo">{{repo.id | number}}</div>
+    <div class="repo">{{repo.name}}</div>
+    <div class="repo" style="color:red">{{repo.language}}</div>
+    <br/>
+  </div>
+</div>
